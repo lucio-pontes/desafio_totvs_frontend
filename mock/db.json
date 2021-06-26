@@ -1,0 +1,202 @@
+{
+  "hirecandidates": [
+    {
+      "id": 1,
+      "name": "Maria José",
+      "age": 23,
+      "city": "Belo Horizonte",
+      "phone": "(031) 97777-6666",
+      "email": "mariajose@tempmail.com",
+      "status": "Active"
+    },
+    {
+      "id": 2,
+      "name": "João Bosco",
+      "age": 25,
+      "city": "São Paulo",
+      "phone": "(011) 96666-5555",
+      "email": "joaobosco@tempmail.com",
+      "status": "Active"
+    },
+    {
+      "id": 3,
+      "name": "Priscila Pires",
+      "age": 28,
+      "city": "São Paulo",
+      "phone": "(011) 93232-2099",
+      "email": "priscilapires@tempmail.com",
+      "status": "Active"
+    },
+    {
+      "id": 4,
+      "name": "Joaquim Alves",
+      "age": 26,
+      "city": "Joinville",
+      "phone": "(047) 9561-6178",
+      "email": "joaquimalves@tempmail.com",
+      "status": "Active"
+    },
+    {
+      "id": 5,
+      "name": "Raimundo Tirol",
+      "age": 26,
+      "city": "Belo Horizonte",
+      "phone": "(031) 978476-7667",
+      "email": "raimundotirol@tempmail.com",
+      "status": "Active"
+    },
+    {
+      "id": 6,
+      "name": "Tereza de Jesus",
+      "age": 25,
+      "city": "Joiville",
+      "phone": "(047) 94399-8854",
+      "email": "terezajesus@tempmail.com",
+      "status": "Active"
+    },
+    {
+      "id": 6,
+      "name": "Antonio Paiva",
+      "age": 24,
+      "city": "São Paulo",
+      "phone": "(011) 98943-6732",
+      "email": "antoniopaiva@tempmail.com",
+      "status": "Active"
+    },
+    {
+      "id": 7,
+      "name": "Bistro Valério",
+      "age": 21,
+      "city": "Bhte",
+      "phone": "(031) 8877-5566",
+      "email": "bistro@gmail.com",
+      "status": "Canceled"
+    },
+    {
+      "name": "Ranyer Segal Pontes",
+      "age": 21,
+      "city": "São Paulo",
+      "phone": "(031) 5444-3235",
+      "email": "ranyersegal@gmail.com",
+      "status": "Active",
+      "id": 8
+    }
+  ],
+  "hirejobs": [
+    {
+      "id": 1,
+      "description": "Analista Fullstack",
+      "status": "Active",
+      "hireprocess": [
+        {
+          "id": 1,
+          "name": "Maria José"
+        },
+        {
+          "id": 2,
+          "name": "João Bosco"
+        },
+        {
+          "id": 3,
+          "name": "Priscila Pires"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "description": "Analista de Negócios",
+      "status": "Active",
+      "hireProcess": []
+    },
+    {
+      "id": 3,
+      "description": "Analista de Testes de Projetos",
+      "status": "Finish",
+      "hireProcess": []
+    },
+    {
+      "description": "Xulispa  af asfdasdfsa",
+      "status": "Active",
+      "id": 4
+    },
+    {
+      "description": "Nova vaga de trabalho financeira",
+      "status": "Finish",
+      "id": 5
+    }
+  ],
+  "hirecurriculums": [
+    {
+      "id": 1,
+      "name": "Maria José",
+      "workHistory": "",
+      "academicHistory": "",
+      "courses": "",
+      "summary": ""
+    },
+    {
+      "id": 2,
+      "name": "João Bosco",
+      "workHistory": "",
+      "academicHistory": "",
+      "courses": "",
+      "summary": ""
+    },
+    {
+      "id": 3,
+      "name": "Priscila Pires",
+      "workHistory": "",
+      "academicHistory": "",
+      "courses": "",
+      "summary": ""
+    },
+    {
+      "hireCandidateId": "8",
+      "worksHistory": "a fewfoweofewiofoweiofw",
+      "academicsHistory": "afoefwehfweifweui",
+      "courses": "fwefweifuh",
+      "summary": "  a weiuhfguwfi weuifhwuifwe",
+      "id": 4
+    }
+  ],
+  "hireprocess": [
+    {
+      "id": 1,
+      "name": "Maria José",
+      "job": "Analista Fullstack",
+      "status": "Active"
+    },
+    {
+      "id": 2,
+      "name": "Maria José",
+      "job": "Analista de Negócios",
+      "status": "Active"
+    },
+    {
+      "id": 3,
+      "name": "Priscila Pires",
+      "job": "Analista de Testes de Projetos",
+      "status": "Process"
+    },
+    {
+      "id": 3,
+      "name": "Ribeiro Rodrigo",
+      "job": "Analista de Testes de Projetos",
+      "status": "Canceled"
+    },
+    {
+      "job": "",
+      "name": "",
+      "phone": "",
+      "email": "",
+      "status": "Active",
+      "id": 4
+    },
+    {
+      "hireCandidateId": 1,
+      "hireJobId": 1,
+      "status": "Active",
+      "id": 5
+    }
+  ]
+}

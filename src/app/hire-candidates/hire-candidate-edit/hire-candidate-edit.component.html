@@ -1,0 +1,72 @@
+<po-page-edit
+  p-title="{{candidate?.id ? 'Alterando Candidato ' + candidate?.id : 'Incluindo Novo Candidato'}}"
+  (p-save)="openConfirmation()">
+
+  <form #f="ngForm">
+
+    <div class="po-row">
+      <po-input
+        class="po-md-12"
+        name="name"
+        p-clean
+        [(ngModel)]="candidate.name"
+        p-label="Nome do candidato"
+        p-disabled="{{candidate.status=='Canceled'}}"> </po-input>
+    </div>
+
+    <div class="po-row">
+      <po-number
+        class="po-md-1"
+        name="age"
+        p-clean
+        [(ngModel)]="candidate.age"
+        p-label="Idade"
+        p-disabled="{{candidate.status=='Canceled'}}"> </po-number>
+
+      <po-input
+        class="po-md-11"
+        name="city"
+        p-clean [(ngModel)]="candidate.city"
+        p-label="Cidade"
+        p-disabled="{{candidate.status=='Canceled'}}"> </po-input>
+    </div>
+
+    <div class="po-row">
+      <po-input
+        class="po-md-3"
+        name="phone"
+        p-clean
+        [(ngModel)]="candidate.phone"
+        p-label="Telefone"
+        p-icon="po-icon-telephone"
+        p-disabled="{{candidate.status=='Canceled'}}"> </po-input>
+
+      <po-email
+        class="po-md-9"
+        name="email"
+        p-clean
+        [(ngModel)]="candidate.email"
+        p-label="Email"
+        p-disabled="{{candidate.status=='Canceled'}}"> </po-email>
+    </div>
+
+    <div class="po-row">
+      <po-radio-group
+        class="po-md-6"
+        name="status"
+        [(ngModel)]="candidate.status"
+        p-label="Situação"
+        [p-options]="optionsStatus"> </po-radio-group>
+    </div>
+
+  </form>
+
+  </po-page-edit>
+
+  <po-modal
+    [p-click-out]="true"
+    [p-hide-close]="true"
+    p-title="Salvar as informações?"
+    [p-primary-action]="confirm"
+    [p-secondary-action]="close"> </po-modal>
+

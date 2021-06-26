@@ -1,0 +1,36 @@
+<po-page-list
+  #poPageList
+  p-title="Listagem de Vagas"
+  [p-actions]="pageActions"
+  [p-disclaimer-group]="disclaimerGroup">
+
+  <po-table
+    [p-auto-collapse]="true"
+    [p-hide-columns-manager]="true"
+    [p-sort]="true"
+    [p-striped]="true"
+    [p-columns]="hiringJobsColumns"
+    [p-hide-columns-manager]="true"
+    [p-items]="hiringJobs">
+
+    <ng-template
+      p-table-row-template
+      let-rowItem
+      let-i="rowIndex"
+      [p-table-row-template-arrow-direction]="tableRowArrowDirection">
+      <po-widget p-title="{{ rowItem.id }} - {{ rowItem.description }}">
+
+          <div class="po-md-2">
+            <po-button p-label="Alterar Dados" (p-click)="editJob( rowItem.id )"> </po-button>
+          </div>
+
+          <div class="po-md-2">
+            <po-button p-label="Candidatos" (p-click)="viewProcess( rowItem.id )"> </po-button>
+          </div>
+
+      </po-widget>
+    </ng-template>
+    
+  </po-table>
+
+</po-page-list>

@@ -1,0 +1,35 @@
+<po-page-edit
+  p-title="{{hireJob?.id ? 'Alterando Vaga ' + hireJob?.id : 'Incluindo Nova Vaga'}}"
+  (p-save)="openConfirmation()">
+
+  <form #f="ngForm">
+
+    <div class="po-row">
+      <po-input
+        class="po-md-12"
+        name="description"
+        p-clean
+        [(ngModel)]="hireJob.description"
+        p-label="Descrição da vaga"
+        p-disabled="{{hireJob.status === 'Canceled'}}"> </po-input>
+    </div>
+
+    <div class="po-row">
+      <po-radio-group
+        class="po-md-4"
+        name="status"
+        [(ngModel)]="hireJob.status"
+        p-label="Situação"
+        [p-options]="optionsStatus"> </po-radio-group>
+    </div>
+  
+  </form>
+
+</po-page-edit>
+
+<po-modal
+  [p-click-out]="true"
+  [p-hide-close]="true"
+  p-title="Salvar as informações?"
+  [p-primary-action]="confirm"
+  [p-secondary-action]="close"> </po-modal>

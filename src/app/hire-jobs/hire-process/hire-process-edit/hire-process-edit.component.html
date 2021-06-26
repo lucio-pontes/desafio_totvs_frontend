@@ -1,0 +1,73 @@
+<po-page-edit
+  p-title="{{hireProcess?.id && hireProcess?.id != 0  ? hireProcess?.name : 'Incluindo Nova Candidatura'}}"
+  (p-save)="openConfirmation()">
+
+  <form #f="ngForm">
+
+    <div class="po-md-12">
+        <div class="po-md-12">
+            <po-info
+                class="po-md-3"
+                p-label="Id"
+                [p-orientation]="orientation"
+                p-value="{{hireCandidate?.id}}"> </po-info>
+            <po-info
+                class="po-md-9"
+                p-label="Vaga"
+                [p-orientation]="orientation"
+                p-value="{{hireJob?.description}}"> </po-info>
+        </div>
+    </div>
+
+    <div class="po-md-12">
+        <div class="po-md-12">
+            <po-info class="po-md-3" p-label="Telefone" [p-orientation]="orientation" p-value="{{hireCandidate?.phone}}"> </po-info>
+            <po-info class="po-md-6" p-label="Email" [p-orientation]="orientation" p-value="{{hireCandidate?.email}}"> </po-info>
+        </div>
+    </div>
+
+    <div class="po-md-12">
+        <div class="po-row po-md-12">
+            <po-radio-group
+                class="po-md-5"
+                name="status"
+                [(ngModel)]="hireProcess.status"
+                p-label="Situação"
+                [p-options]="optionsStatus"> </po-radio-group>
+        </div>
+    </div>
+
+    <div class="po-row">
+        <po-select class="po-md-6"
+            name="candidate"
+            [(ngModel)]="hireCandidateId"
+            p-label="Candidato"
+            [p-options]="candidateOptions"
+            (p-change)="modifyCandidate($event)"> </po-select>
+    </div>
+
+    <!--div class="po-md-2">
+        <po-button p-label="Remover Candidatura" (p-click)="removeProcess()"> </po-button>
+    </div-->
+    
+    <!--div class="po-row">
+      <po-input
+        class="po-md-12"
+        name="description"
+        p-clean
+        [(ngModel)]="hireJob.description"
+        p-label="Descrição da vaga"
+        p-disabled="{{hireJob.status === 'Canceled'}}"> </po-input>
+    </div-->
+
+  
+  </form>
+
+</po-page-edit>
+
+<po-modal
+  [p-click-out]="true"
+  [p-hide-close]="true"
+  p-title="Salvar as informações?"
+  [p-primary-action]="confirm"
+  [p-secondary-action]="close"> </po-modal>

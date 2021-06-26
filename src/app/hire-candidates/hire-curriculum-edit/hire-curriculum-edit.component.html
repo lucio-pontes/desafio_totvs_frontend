@@ -1,0 +1,42 @@
+<po-page-edit
+  p-title="{{hireCurriculum?.id ? 'Alterando Dados do Curriculo ' + hireCurriculum?.id : 'Incluindo Dados do Curriculo'}}"
+  (p-save)="openConfirmation()">
+
+  <form #f="ngForm">
+
+    <po-info class="po-md-4" p-label="Nome do Candidato" [p-value]="hireCandidateName"> </po-info>
+
+    <po-textarea
+        name="worksHistory"
+        [(ngModel)]="hireCurriculum.worksHistory"
+        p-label="Histórico de Trabalhos"
+        [p-maxlength]="maxlength"> </po-textarea>
+
+    <po-textarea
+        name="academicsHistory"
+        [(ngModel)]="hireCurriculum.academicsHistory"
+        p-label="Histórico Acadêmico"
+        [p-maxlength]="maxlength"> </po-textarea>
+
+    <po-textarea
+        name="courses"
+        [(ngModel)]="hireCurriculum.courses"
+        p-label="Outros Cursos"
+        [p-maxlength]="maxlength"> </po-textarea>
+
+    <po-textarea
+        name="summary"
+        [(ngModel)]="hireCurriculum.summary"
+        p-label="Resumo"
+        [p-maxlength]="maxlength"> </po-textarea>
+
+  </form>
+
+</po-page-edit>
+
+<po-modal
+    [p-click-out]="true"
+    [p-hide-close]="true"
+    p-title="Salvar as informações?"
+    [p-primary-action]="confirm"
+    [p-secondary-action]="close"> </po-modal>

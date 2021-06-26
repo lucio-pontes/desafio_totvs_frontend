@@ -1,0 +1,41 @@
+<po-page-list
+  #poPageList
+  p-title="{{hireJobDescription}}"
+  [p-actions]="pageActions"
+  [p-disclaimer-group]="disclaimerGroup">
+
+  <po-table
+    [p-auto-collapse]="true"
+    [p-hide-columns-manager]="true"
+    [p-sort]="true"
+    [p-striped]="true"
+    [p-columns]="hiringProcessColumns"
+    [p-hide-columns-manager]="true"
+    [p-items]="hiringProcessFiltered">
+
+    <ng-template
+      p-table-row-template
+      let-rowItem
+      let-i="rowIndex"
+      [p-table-row-template-arrow-direction]="tableRowArrowDirection">
+      <po-widget p-title="{{ hireJobId }} - {{ hireJobDescription }}">
+
+        <!--div class="po-row">
+          <po-info class="po-md-3" p-label="Id" [p-orientation]="orientation" [p-value]="rowItem.id"> </po-info>
+          <po-info class="po-md-7" p-label="Nome do Candidato" [p-orientation]="orientation" [p-value]="rowItem.name"> </po-info>
+          </div-->
+        
+          <div class="po-md-2">
+            <po-button p-label="Alterar Candidatura" (p-click)="editProcess( rowItem.id )"> </po-button>
+          </div>
+
+          <!--div class="po-md-2">
+            <po-button p-label="Aprovar Candidato" (p-click)="finishHireProcess( rowItem.id )"> </po-button>
+          </div-->
+
+      </po-widget>
+    </ng-template>
+    
+  </po-table>
+
+</po-page-list>
